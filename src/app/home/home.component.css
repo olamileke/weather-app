@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Thasadith");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+div.container
+{
+	position:fixed;	
+	background:linear-gradient(to top right,dodgerblue, #19D3C9);
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div.container div.main
+{
+	color:#fff;
+	width:650px;
+	text-align:center;
+	margin-top:-100px;
+	animation:moveRight 2.1s 0.8s both ease-out;
+}
+
+
+div.main p.headerTxt
+{
+	font-size:3em;
+	font-family:'Quicksand', sans-serif;
+	margin-bottom:30px;
+}
+
+div.container div.main div a
+{
+	color:#fff;
+	text-decoration:none;
+	font-family:'Trebuchet MS', sans-serif;
+	font-size:1.05em;
+	margin-right:10px;
+	border-radius:3px;
+	border:1px solid #CCF2FF;
+	padding:7px;
+}
+
+div.main button
+{
+	background:none;
+	border:none;
+	outline: none;
+	font-family:'Trebuchet MS', sans-serif;
+	font-size:1.05em;
+	margin-right:10px;
+	border-radius:3px;
+	border:1px solid #CCF2FF;
+	padding:7px;
+	color:#fff;
+	cursor:pointer;
+}
+
+div.container div.main div a:hover, div.main button:hover
+{
+	background:rgba(255,215,0);
+	border-color:rgba(255,215,0);
+}
+
+
+div.dialog_container
+{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	background:rgba(0,0,0,0.8);
+	z-index:2;
+}
+
+div.dialog
+{
+	margin:7vh auto;
+	width:450px;
+	padding:20px 0 5px 0;
+	height:auto;	
+	min-height:80px;
+	border:1px solid #000;
+	background:#fff;
+	border-radius:6px;
+	border:1px solid #000;
+}
+
+div.dialog.active
+{
+	padding-bottom:40px;
+}
+
+div.dialog form
+{
+	position:relative;
+	top:0%;
+	left:5%;
+	width:90%;
+	font-family:"Trebuchet MS", sans-serif;
+}
+
+div.dialog input
+{
+	width:100%;
+	padding:8px 8px 8px 10px;
+	box-sizing: border-box;
+	border:1px solid rgba(0,0,0,0.07);
+	background:rgba(0,0,0,0.02);
+	border-radius:4px;
+	color:rgba(0,0,0,0.75);
+	font-size:0.75em;
+	font-family:'Quicksand', sans-serif;
+}
+
+div.dialog input:focus
+{
+	ouline:none;
+}
+
+div.suggestions
+{
+	position:relative;
+	top:1%;
+	left:5%;
+	width:77.6%;
+	padding:5px 0 5px 10px;
+	box-sizing: border-box;
+	font-family:'Trebuchet MS', sans-serif;
+	font-size:0.9em;
+}
+
+div.suggestions div.suggestion
+{
+	margin:7px 0 7px 0;
+}
+
+div.suggestions a
+{
+	text-decoration: none;
+	COLOR:rgba(18,97,160,0.7)
+}
+
+div.dialog button
+{
+	position:relative;
+	top:5px;
+	left:-5%;
+	float:right;
+	background:#fff;
+	border:1px solid rgba(0,0,0,0.3);
+	padding:4px;
+	border-radius:3px;
+	color:rgba(0,0,0,0.5);
+	cursor:pointer;
+}
+
+
+/*RESPONSIVE CSS STYLING*/
+
+@media(max-width:590px)
+{
+	div.container div.main
+	{
+		width:450px;
+	}
+
+	div.main p.headerTxt
+	{
+		font-size: 2.2em;
+	}
+
+	div.container div.main div a, div.main button
+	{
+		font-size:1em;
+		padding:6px 4px;
+	}
+}
+
+@media(max-width:452px)
+{
+	div.container div.main
+	{
+		width:350px;
+	}
+
+	div.main p.headerTxt
+	{
+		font-size: 1.65em;
+		margin-bottom:22px;
+	}
+
+	div.container div.main div a, div.main button
+	{
+		font-size:0.8em;
+		padding:4px 4px;
+	}
+
+	div.dialog
+	{
+		width:94vw;
+		border-radius:5px;
+	}
+}
+
+
+@media(max-width:352px)
+{
+	div.container div.main
+	{
+		width:318px;
+	}
+
+	div.main p.headerTxt
+	{
+		font-size: 1.52em;
+		margin-bottom:17px;
+	}
+
+	div.container div.main div a
+	{
+		font-size:0.7em;
+		padding:4px 4px;
+	}
+}
+
+
+
+/*ANIMATION STYLES FOR DIV.MAIN*/
+
+@keyframes moveRight
+{
+	from
+	{
+		margin-top:100px;
+		opacity:0;
+	}
+
+	to
+	{
+		margin-top:-100px;
+		opacity:1;
+	}
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ChannelPartnerInterface
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# Weather-App
+A Weather application that displays current weather information along with a four day forecast for various cities. Users can explore cities or can try out personalized searches for particular cities. Built with Angular 7 
+>>>>>>> 86d8cc883bf517b71c8340ed3b558aaca36367e2

@@ -1,0 +1,38 @@
+
+<div class='container_e'>
+
+	<ng-template #citybody>
+		<div class='citybody'>
+
+			<button (click)='changeWeather()' *ngIf="weather.length == 10">Refresh</button>
+
+
+			<div class="lds-ring" #loader  *ngIf="isCompleted < 2"><div></div><div></div><div></div><div></div></div>
+
+			<div class="lds-ring" #loader *ngIf="isCompleted < 2"><div></div><div></div><div></div><div></div></div>
+			
+				<div class='weather' *ngFor='let w of weather'>
+					<a routerLink='/weather/{{ w.name  | lowercase }}/{{ w.sys.country | lowercase }}'>
+						<p class='city'>{{ w.name }}</p>
+						<img src="http://openweathermap.org/img/w/{{ w.weather[0].icon }}.png" width='40px' height='40px'>
+						<p>{{ w.weather[0].main }}</p>
+						<p class='temp'> {{ w.main.temp }} <sup>o</sup> </p>
+					</a>
+				</div>
+		</div>
+	</ng-template>
+
+	<div *ngIf="errornum > 0; else citybody">
+		<div class="errormsg">
+            <i class='em em-anguished'></i>
+
+            <p>There was a problem fetching weather data. Please try again</p>
+         </div>
+
+         <div></div>
+     </div>
+
+     <div class='nav' (click)="goBack()">
+		<img src="assets/backbutton.png" width='40px' height='40px'>
+	</div>
+</div>

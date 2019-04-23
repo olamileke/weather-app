@@ -1,0 +1,34 @@
+body
+{
+	margin:0;
+	padding:0;
+}
+
+div.nav
+{
+	position:fixed;
+	top:3vh;
+	left:4vh;
+	cursor:pointer;
+}
+
+
+@media(max-width:768px)
+{
+	div.nav
+	{
+		top:2vh;
+		left:2vw;
+	}
+}
+
+@media(max-width:545px)
+{
+	div.nav
+	{
+		top:91vh;
+		left:85vw;
+	}
+}
+
+

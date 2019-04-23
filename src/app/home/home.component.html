@@ -1,0 +1,32 @@
+	
+<div class='container'>
+
+	<div class='main'>			
+
+		<p class='headerTxt'>Angular Weather Application</p>
+		<div>
+			<a routerLink="/explore">Explore</a>
+			<button (click)="triggerDialog()">Search</button>
+			<a routerLink="/history">History</a>
+		</div>
+	</div>
+
+</div>
+
+<div class='dialog_container' *ngIf="dialog">
+	
+	<div [ngClass]="{'dialog':1 == 1, 'active':suggestions_active }">
+
+		<form>
+			<input #input (input)="getSuggestions(input.value)"  type="text" name="search" placeholder='Enter the City name'>
+		</form>
+
+		<div class='suggestions'>
+			<div class='suggestion' *ngFor="let suggestion of suggestions">
+				<a routerLink='/weather/{{ suggestion.name | lowercase}}/{{ suggestion.country_code | lowercase }}'> {{ suggestion.name }}, {{ findCountryName(suggestion.country_code) }} </a>
+			</div>
+		</div>
+
+		<button (click)="closeDialog()">Close</button>
+	</div>
+</div>

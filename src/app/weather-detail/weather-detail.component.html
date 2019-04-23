@@ -1,0 +1,88 @@
+
+<div class='container_w'>
+	
+	<div class='weatherbody' #weatherbody>
+		
+		<ng-template #content> 
+
+
+			<div class='todays_details' *ngIf="errornum == 0">
+				<div class='weather_details'>
+					
+					<div class='main_details'>
+						<img src="http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png" width='40px' height='40px'>
+
+						<div class='date'>
+							<p>{{ weather.date }}</p>
+							<span>({{ weather.coord.lon }}, {{ weather.coord.lat }})</span>
+						 </div>
+
+						<div>
+							<p>{{ weather.main.temp}} <sup>o</sup> </p>
+							<span>{{ weather.weather[0].description }}</span>
+						</div>
+					</div> 
+
+					<p>{{ date }}</p>
+
+					<div class='extra_details'>
+						<div>
+							<span>{{ weather.main.humidity }} </span>
+							<p> Humidity </p>
+						</div>
+
+						<div>
+							<span>{{ weather.main.pressure }} </span>
+							<p> Pressure </p>
+						</div>
+
+						<div>
+							<span>{{ weather.wind.speed }} </span>
+							<p> Wind Speed </p>
+						</div>
+
+						<div>
+							<span>{{ weather.wind.deg }}</span>
+							<p>Wind Degree</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class='current_day'>
+					<p>{{ weather.name}}, {{ weather.sys.country }}</p>
+					<span>{{ weather.weather[0].main }}</span>
+				</div>
+
+			</div>
+
+			<div class='forecast' *ngIf="errornum == 0">
+				<div *ngFor='let weather of forecastweather'>
+					<p>{{ weather.date }}</p>
+					<img src="http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png" width='53px' height='53px'>
+					<p class='temp'>{{ weather.main.temp }} <sup>o</sup> </p>
+					<p class='main'> {{ weather.weather[0].main }} </p>
+					<p class='description'> {{ weather.weather[0].description }} </p>
+					<p>Humidity</p>
+					<p class='humidity'>{{ weather.main.humidity }}</p>
+				</div>
+			</div>
+
+			<div class='errormsg' *ngIf="errornum > 0">
+				<i class='em em-anguished'></i>
+				<p>Weather data is currently not available</p>
+			</div>
+
+		</ng-template>
+
+
+	 	<div class='loadcontainer' *ngIf="isEmpty() && errornum == 0; else content">
+	 		<div class="loader-ring"><div></div><div></div><div></div><div></div></div>
+	 	</div>
+
+	</div>
+
+	  <div class='nav' (click)="goBack()">
+		<img src="assets/backbutton.png" width='40px' height='40px'>
+	</div>
+</div>

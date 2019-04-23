@@ -1,0 +1,24 @@
+
+<div class='container'>
+	
+	<div class='historybody'>
+	
+		<button *ngIf='history.length > 0' (click)="clearHistory()">Clear</button>
+		<div class='history' *ngFor="let h of history">
+			<p class='id'>{{ h.id }}</p>
+			<p class='city'><a routerLink='/weather/{{h.city}}/{{h.c_code}}'>{{ h.city }}, {{h.c_code}}</a></p>
+			<p class='time'>{{ getFormattedTime(h.time) }}</p>
+		</div>
+
+		<div *ngIf='history.length == 0'>
+			<div class='error'>
+				<i class='em em-anguished'></i>
+				<p>Nothing to display here</p>
+			</div>
+		</div>
+	</div>
+
+	<div class='nav' (click)="goBack()">
+		<img src="assets/backbutton.png" width='40px' height='40px'>
+	</div>
+</div>

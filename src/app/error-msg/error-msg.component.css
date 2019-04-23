@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+
+div.container
+{
+	position:fixed;
+	width:100vw;
+	height:100vh;
+	background:linear-gradient(to top right,dodgerblue, #19D3C9);
+	display:flex;
+	flex-flow:column;
+	align-items: center;
+	justify-content: center;
+}
+
+div.errormsg
+{
+	position:relative;
+	top:-7vh;
+	text-align:center;
+	color:#fff;
+	font-family:'Quicksand', sans-serif;
+}
+
+div.errormsg p
+{
+	font-size:1.3em;
+	margin:0;
+	margin-bottom:28px;
+}
+
+div.errormsg p.error404 
+{
+	font-size:3em !important;
+	margin-bottom:14px !important;
+}
+
+div.errormsg a
+{
+	color:#fff;
+	text-decoration:none;
+	font-family:'Trebuchet MS', sans-serif;
+	font-size:1.05em;
+	margin-right:10px;
+	border-radius:3px;
+	border:1px solid #CCF2FF;
+	padding:7px;
+}
+
+div.errormsg a:hover
+{
+	background:rgba(255,215,0);
+	border-color:rgba(255,215,0);
+}
+
