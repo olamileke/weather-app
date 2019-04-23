@@ -1,9 +1,6 @@
 # Weather-App
 A Weather application that displays current weather information along with a four day forecast for various cities. Users can explore cities or can try out personalized searches for particular cities. Built with Angular 7. I hosted this with github pages and it can be found at olamileke.github.io/weather-app
 
-
-# Weather-App
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 
 ## Development server
