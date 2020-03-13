@@ -1,18 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
 import { ActivatedRoute } from '@angular/router';
-
 import { Location } from '@angular/common';
-
 import { HttpClient } from '@angular/common/http';
-
 import { catchError, tap , map} from 'rxjs/operators';
-
 import { Observable, of} from 'rxjs';
-
 import { History } from '../history';
-
 import { HistoryService } from '../history.service';
+import { config } from '../config'; 
 
 @Component({
   selector: 'app-weather-detail',
@@ -34,7 +28,7 @@ export class WeatherDetailComponent implements OnInit {
 
   successnum:number=0;
 
-  apikey="04805aacf38a86e7644bc839b288ab00";
+  apikey=config.api_key;
 
   id=524901;
 

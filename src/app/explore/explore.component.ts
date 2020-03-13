@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CITIES } from '../cities';
 import { HttpClient } from '@angular/common/http';
-
 import { catchError, map, tap } from 'rxjs/operators';
-
-import {Observable,of} from 'rxjs';
-
+import { config } from '../config'; 
+import { Observable,of } from 'rxjs';
 import { Location } from '@angular/common';
 
 
@@ -23,7 +21,7 @@ export class ExploreComponent implements OnInit {
 
   nums:Number[]=[];
 
-  apikey="04805aacf38a86e7644bc839b288ab00";
+  apikey=config.api_key
 
   id=524901;
 
