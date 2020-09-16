@@ -3,7 +3,7 @@
 ------------
 
 
-A weather application that displays daily weather information along with a four day forecast. View it [here](https://olamileke.github.io/weather-app. "here").
+A weather application that displays daily weather information along with a four day forecast. View it [here](https://olamileke.github.io/weather-app "here").
 
 To run this locally, you need to have node installed. Get that [here](https://nodejs.org "here"). You also need to have the Angular CLI installed. Open up the terminal and run 
 
