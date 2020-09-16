@@ -1,12 +1,53 @@
-# Weather-App
-A Weather application that displays current weather information along with a four day forecast for various cities. Users can explore cities or can try out personalized searches for particular cities. Built with Angular 7. Deployed at https://olamileke.github.io/weather-app.
+### Weather App
 
-To run this locally, you must have node and Angular installed. Get node at <a href='https://nodejs.org'>nodejs.org</a>. To install the Angular CLI globally on your system, run <b>npm install -g @angular/cli</b>.
+------------
 
-You must also have an openweathermap api key. Get that at <a href="https://openweathermap.org">openweathermap.org</a>
 
-Clone this repo by running <b>git clone https://github.com/olamileke/weather-app.git</b>. Then cd into the directory where it is cloned and run npm install. This will install all the dependencies found in the package.json file. 
+A weather application that displays daily weather information along with a four day forecast. View it [here](https://olamileke.github.io/weather-app. "here").
 
-Find the config.ts file in the app subdirectory and set api_key to your openweathermap api key.
+To run this locally, you need to have node installed. Get that [here](https://nodejs.org "here"). You also need to have the Angular CLI installed. Open up the terminal and run 
 
-Run ng serve --open to open the app at localhost:4200 on your browser.
+   ```
+   npm install -g @angular/cli
+   ```
+
+This will install the latest version of the Angular CLI which will enable you to run Angular applications.
+
+Next up, navigate into the directory of your choice on your system and clone this repository by running
+
+```
+git clone https://github.com/olamileke/weather-app.git
+```
+
+
+When cloning is complete, navigate into the application directory by running
+
+```
+cd weather-app
+```
+
+At this point, we need to install all the packages needed by the app to run. This is done by running
+
+   ```
+   npm install
+   ```
+
+This will install all the packages defined in the package.json file in the application root.
+
+One more thing to do before running the app. Get an openweathermap api key at [openweathermap.org](https://openweathermap.org "openweathermap.org")
+
+Locate the config.ts file in the src/app subdirectory and set the openweathermap api key you got as the api_key in the exported config object.
+
+Then, return to the terminal in the application root and run
+
+```
+ng serve
+```
+
+When the application is done compiling, access it at localhost:4200. Alternatively you can specify the port you want the application to run at by adding a port parameter like
+
+```
+ng serve --port 5000
+```
+
+Here, the app will be available at localhost:5000
